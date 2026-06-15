@@ -1,0 +1,185 @@
+/* Seção de Apresentação */
+/* ===================== */
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 8%;
+  background-image: url("../img/hero-fundo.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(26, 47, 59, 0.85) 0%,
+    rgba(26, 47, 59, 0.6) 40%,
+    rgba(26, 47, 59, 0.2) 100%
+  );
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  background: rgba(212, 154, 59, 0.2);
+  color: #f3c26a;
+  font-weight: 700;
+}
+
+.hero-conteudo {
+  max-width: 650px;
+}
+
+.hero-conteudo h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-titulo);
+}
+
+.container-hero {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-conteudo {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  padding: 3rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+.hero-conteudo h2 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-conteudo p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* BOTÕES HERO */
+/* =========== */
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  text-decoration: none;
+
+  padding: 1rem 1.8rem;
+
+  border-radius: 14px;
+
+  font-weight: 700;
+
+  transition: all 0.35s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botão Principal */
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--cor-secundaria-ouro), #e5b55f);
+
+  color: white;
+
+  box-shadow: 0 10px 25px rgba(212, 154, 59, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 18px 35px rgba(212, 154, 59, 0.35);
+}
+
+/* Botão Secundário */
+
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  background: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(10px);
+
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+
+  transform: translateY(-4px);
+}
+
+/* Responsividade Hero */
+/* =================== */
+
+@media (max-width: 768px) {
+  .apresentacao {
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .container-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-conteudo {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .hero-conteudo h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-conteudo p {
+    font-size: 1rem;
+  }
+
+  .logo-prefeitura {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-conteudo {
+    padding: 1.5rem;
+  }
+
+  .hero-conteudo h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn-saiba-mais {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}

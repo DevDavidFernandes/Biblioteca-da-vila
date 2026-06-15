@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="src/img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="src/estilos/global.css" />
+    <link rel="stylesheet" href="src/estilos/header.css" />
+    <link rel="stylesheet" href="src/estilos/hero.css" />
+    <link rel="stylesheet" href="src/estilos/about.css" />
+    <link rel="stylesheet" href="src/estilos/books.css" />
+    <link rel="stylesheet" href="src/estilos/contador.css" />
+    <link rel="stylesheet" href="src/estilos/contato.css" />
+    <link rel="stylesheet" href="src/estilos/footer.css" />
+    <link rel="stylesheet" href="src/estilos/toast.css" />
+    <title>Biblioteca da Vila</title>
+  </head>
+  <body>
+    <!-- Cabeçalho / Header -->
+    <!-- ================== -->
+
+    <header>
+      <nav class="nav-container">
+        <div class="logo-area">
+          <a href="index.html">
+            <img src="src/img/logo-vila.png" alt="Logo Biblioteca" />
+            <h1>Biblioteca da Vila</h1>
+          </a>
+        </div>
+
+        <!-- Menu de navegação -->
+        <!-- ================= -->
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#livros">Livros</a></li>
+          <li><a href="#contato">Contatos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Conteudos principais -->
+    <!-- ==================== -->
+
+    <main>
+      <!-- Apresenteação -->
+      <!-- ============= -->
+      <section id="home" class="hero">
+        <div class="container-hero">
+          <div class="hero-conteudo">
+            <span class="hero-badge"> Biblioteca Comunitária </span>
+
+            <h2>Histórias que conectam pessoas.</h2>
+
+            <p>
+              Compartilhe livros, descubra novos autores e fortaleça a cultura
+              da nossa comunidade.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#livros" class="btn-primary">Explorar Acervo</a>
+
+              <a href="#sobre" class="btn-secondary">Conhecer Projeto</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção sobre -->
+      <!-- =========== -->
+
+      <section id="sobre" class="about-section">
+        <div class="section-intro">
+          <span class="section-tag"> Nossa História </span>
+
+          <h2>Sobre a Biblioteca</h2>
+        </div>
+
+        <div class="about-container">
+          <div class="about-image">
+            <img src="src/img/about-1.jpg" alt="Nossa missão" />
+          </div>
+
+          <!-- Accordion -->
+          <div class="about-accordion">
+            <!-- Item 1 -->
+            <div class="accordion-item active">
+              <button class="accordion-header">Qual a nossa missão?</button>
+              <div class="accordion-content">
+                <h3 class="desc-title">Fomentar a Cultura</h3>
+                <p class="desc-text">
+                  Nossa missão é democratizar o acesso à leitura para todos os
+                  moradores da vila.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                O que você encontra aqui?
+              </button>
+              <div class="accordion-content">
+                <h3 class="desc-title">Acervo Comunitário</h3>
+                <p class="desc-text">
+                  Desde clássicos da literatura até autores locais
+                  independentes.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Quem pode frequentar o espaço?
+              </button>
+              <div class="accordion-content">
+                <h3 class="desc-title">Um Lugar para Todos</h3>
+                <p class="desc-text">
+                  Nosso espaço é gratuito e aberto a qualquer pessoa, desde
+                  crianças dando os primeiros passos na leitura até idosos em
+                  busca de uma boa conversa e um café.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Como faço para levar um livro para casa?
+              </button>
+              <div class="accordion-content">
+                <h3 class="desc-title">Cadastro Simples e Gratuito</h3>
+                <p class="desc-text">
+                  Basta trazer um comprovante de residência da vila e um
+                  documento com foto ou realizar o cadastro pelo site. Em menos
+                  de cinco minutos você faz sua carteirinha e já sai com sua
+                  próxima leitura.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Como posso apoiar a biblioteca?
+              </button>
+              <div class="accordion-content">
+                <h3 class="desc-title">Cultive Conosco</h3>
+                <p class="desc-text">
+                  Você pode fazer parte da nossa história doando livros em bom
+                  estado, participando como voluntário nos nossos eventos ou
+                  simplesmente compartilhando nosso projeto com seus vizinhos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Livros -->
+      <!-- ============ -->
+
+      <div class="reservation-icon">
+        <button id="btn-reservas">
+          <i
+            class="fa-solid fa-bag-shopping"
+            style="color: var(--cor-fundo-pagina)"
+          ></i>
+          <span id="contador-reservas">0</span>
+        </button>
+      </div>
+      
+
+      <section id="livros" class="books-section">
+        <div class="section-header">
+          <div>
+            <span class="section-tag"> Biblioteca Comunitária </span>
+
+            <h2>Livros Disponíveis</h2>
+
+            <p>Explore os livros compartilhados pela comunidade.</p>
+          </div>
+
+          <button id="btn-doar-livro">
+            <span>+</span>
+            Doar Livro
+          </button>
+        </div>
+
+        <div class="books-toolbar">
+          <input
+            type="text"
+            id="pesquisa-livro"
+            placeholder="Pesquisar livros..."
+          />
+        </div>
+
+        <div id="lista-livros" class="books-grid"></div>
+      </section>
+
+      <section id="minhas-doacoes" class="books-section">
+        <div class="section-header">
+          <h2>Minhas Doações</h2>
+        </div>
+
+        <div id="lista-doacoes" class="books-grid"></div>
+      </section>
+
+      <!-- Modal de cadastro -->
+      <div id="modal-doacao" class="modal">
+        <div class="modal-content">
+          <button id="fechar-modal" class="close-btn">✕</button>
+
+          <h2>Doar Livro</h2>
+
+          <form id="form-doacao">
+            <input type="text" id="titulo" placeholder="Título" required />
+
+            <input type="text" id="autor" placeholder="Autor" required />
+
+            <input type="url" id="imagem" placeholder="URL da capa" />
+
+            <button type="submit">Cadastrar Livro</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- MENU LATERAL -->
+      <!-- ============ -->
+
+      <div id="overlay-sidebar" class="overlay-sidebar"></div>
+
+      <div id="sidebar-reservas" class="sidebar">
+        <div class="sidebar-header">
+          <h3>Livros Reservados</h3>
+
+          <button id="fechar-sidebar">✕</button>
+        </div>
+
+        <div id="lista-reservas"></div>
+
+        <button id="confirmar-reserva">Reservar</button>
+      </div>
+
+      <!-- Seção Contato -->
+      <!-- ============= -->
+
+      <section id="contato" class="contact-section">
+        <div class="contact-header">
+          <span class="section-tag">Fale Conosco</span>
+
+          <h2>Entre em Contato</h2>
+
+          <p>
+            Tem alguma dúvida, sugestão ou deseja colaborar com a biblioteca?
+            Envie uma mensagem para nossa equipe.
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <!-- Informações -->
+
+          <div class="contact-info">
+            <h3>Biblioteca da Vila</h3>
+
+            <p>
+              Promovendo acesso à leitura e fortalecendo a cultura da nossa
+              comunidade.
+            </p>
+
+            <div class="contact-item">📍 Angra dos Reis - RJ</div>
+
+            <div class="contact-item">📞 (24) 99999-9999</div>
+
+            <div class="contact-item">✉ contato@bibliotecadavila.com</div>
+          </div>
+
+          <!-- Formulário -->
+
+          <form class="contact-form">
+            <input type="text" placeholder="Seu nome" required />
+
+            <input type="email" placeholder="Seu e-mail" required />
+
+            <input type="text" placeholder="Assunto" required />
+
+            <textarea
+              rows="6"
+              placeholder="Digite sua mensagem..."
+              required
+            ></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <!-- ====== -->
+
+    <footer class="footer" id="contato">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="src/img/logo-vila.png" alt="Biblioteca da Vila" />
+
+          <h3>Biblioteca da Vila</h3>
+
+          <p>
+            Um espaço comunitário dedicado à leitura, ao compartilhamento de
+            conhecimento e ao fortalecimento da cultura local.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navegação</h4>
+
+          <a href="#home">Home</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#livros">Livros</a>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contato</h4>
+
+          <p>contato@bibliotecadavila.com</p>
+          <p>(24) 99999-9999</p>
+          <p>Angra dos Reis - RJ</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Biblioteca da Vila • Todos os direitos reservados</p>
+      </div>
+    </footer>
+
+    <!-- TOAST -->
+    <!-- ===== -->
+
+    <div id="toast" class="toast">
+      <div class="toast-icon">✓</div>
+
+      <div class="toast-content">
+        <h4>Mensagem enviada!</h4>
+        <p>Entraremos em contato em breve.</p>
+      </div>
+    </div>
+
+    <!-- Scripts JS -->
+    <!-- ========== -->
+
+    <script src="src/script/header.js"></script>
+    <script src="src/script/accordion.js"></script>
+    <script src="src/script/books.js"></script>
+    <script src="src/script/reserva.js"></script>
+    <script src="src/script/toast.js"></script>
+  </body>
+</html>

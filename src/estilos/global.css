@@ -1,0 +1,98 @@
+/* Reset global */
+/* ============ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* body / Corpo */
+/* ============ */
+
+body {
+  font-family: var(--font-corpo);
+  font-weight: var(--weight-regular);
+  font-size: var(--size-body);
+  line-height: var(--lh-corpo);
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-primaria-escura);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cor-secundaria-ouro) #f1f1f1;
+}
+
+/* Chrome, Edge e Safari */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cor-superficie-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--cor-secundaria-ouro),
+    var(--cor-primaria-escura)
+  );
+
+  border-radius: 20px;
+  border: 2px solid var(--cor-superficie-alt);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b07a2d;
+}
+
+:root {
+  /* root das cores */
+  /* ============== */
+
+  --cor-primaria-escura: #1a2f3b; /* Azul Petróleo Escuro - Estrutura e Textos */
+  --cor-secundaria-ouro: #d49a3b; /* Mostarda / Ouro Queimado - Destaques e Links */
+  --cor-acento-oliva: #5a7253; /* Verde Oliva - Elementos de Comunidade/Natureza */
+
+  --cor-fundo-pagina: #faf6f0; /* Off-White / Tom de papel pólen acolhegante */
+  --cor-superficie: #ffffff; /* Blanco Puro - Cards, tabelas e modais */
+  --cor-superficie-alt: #f2eae0; /* Tom de papel ligeiramente mais escuro para divisores */
+
+  --cor-texto-suave: #4a5560; /* Cinza Escuro Azulado - Parágrafos secundários */
+  --cor-borda-suave: #e0d9ce; /* Bege Acinzentado - Bordas finas e contornos */
+
+  --background: var(--cor-fundo-pagina);
+  --text-main: var(--cor-primaria-escura);
+  --link-color: var(--cor-secundaria-ouro);
+
+  /* root das fontes */
+  /* =============== */
+
+  --font-titulo: "Montserrat", sans-serif;
+  --font-corpo: "Merriweather", serif;
+  --font-codigo: "Courier New", Courier, monospace;
+
+  /* Pesos das Fontes */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  --weight-black: 900;
+
+  /* Tamanhos Base de Fonte (Escala Óptica Adaptável) */
+  --size-hero: 2.5rem; /* ~40px: Título de impacto da página principal */
+  --size-h1: 2rem; /* ~32px: Títulos de seções principais */
+  --size-h2: 1.5rem; /* ~24px: Subseções e títulos de nível 2 */
+  --size-h3: 1.25rem; /* ~20px: Títulos de cards ou blocos menores */
+  --size-body: 1rem; /*  16px: Texto corrido padrão / Parágrafos */
+  --size-small: 0.875rem; /*  14px: Legendas, rodapés e metadados */
+
+  /* Alturas de Linha (Line Height - Essencial para Acessibilidade) */
+  --lh-titulos: 1.2; /* Mais compacto para evitar quebras distantes */
+  --lh-corpo: 1.6; /* Mais espaçado para simular páginas literárias */
+
+  /* Espaçamento de Letras (Decorativo) */
+  --letter-spacing-titulo: 1px;
+}

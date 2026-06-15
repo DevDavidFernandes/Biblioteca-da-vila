@@ -1,0 +1,132 @@
+/* HEADER */
+/* ====== */
+
+header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.35s ease;
+}
+
+header.header-hidden {
+  transform: translateY(-150%);
+}
+
+header.scrolled .nav-container {
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(20px);
+}
+
+.nav-container {
+  width: min(1400px, 90%);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container a {
+  display: flex;
+  position: relative;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-titulo);
+  font-weight: var(--weigth-black);
+  color: var(--text-main);
+}
+
+.logo-area img {
+  height: 70px;
+  transition: transform 0.3s ease;
+  padding-right: 1rem;
+}
+
+.logo-area img:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding-bottom: 0.5px;
+  transition: 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--cor-secundaria-ouro);
+  transition: 0.35s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--cor-acento-oliva);
+}
+
+/* Responsividade Header */
+/* ===================== */
+
+@media (max-width: 1150px) {
+  .nav-container {
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .logo-area img {
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    margin: 0 10px;
+  }
+
+  .logo-area img {
+    height: 45px;
+  }
+}

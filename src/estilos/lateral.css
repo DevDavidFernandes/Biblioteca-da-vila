@@ -1,0 +1,33 @@
+/* Área rolável */
+#lista-reservas {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Largura da barra */
+#lista-reservas::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Fundo da barra */
+#lista-reservas::-webkit-scrollbar-track {
+  background: #f3f3f3;
+  border-radius: 20px;
+}
+
+/* Parte que desliza */
+#lista-reservas::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--cor-secundaria-ouro),
+    var(--cor-primaria-escura)
+  );
+
+  border-radius: 20px;
+}
+
+/* Hover */
+#lista-reservas::-webkit-scrollbar-thumb:hover {
+  background: #b07a2d;
+}
