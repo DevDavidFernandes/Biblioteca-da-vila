@@ -60,7 +60,7 @@ Todo o gerenciamento de dados é realizado localmente utilizando o LocalStorage 
 
 * HTML5
 * CSS3
-* JavaScript (ES6+)
+* JavaScript
 
 ### Armazenamento
 
