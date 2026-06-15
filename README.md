@@ -85,7 +85,7 @@ Todo o gerenciamento de dados é realizado localmente utilizando o LocalStorage 
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/biblioteca-da-vila.git
+https://github.com/DevDavidFernandes/Biblioteca-da-vila.git
 ```
 
 2. Abra a pasta do projeto.
